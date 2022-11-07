@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  milkformulatemperaturesimulator:
+    image: milkformulatemperaturesimulator
+    build:
+      context: .
+      dockerfile: ./Dockerfile
