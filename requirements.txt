@@ -3,5 +3,6 @@ pandas==1.5.1
 streamlit==1.14.0
 matplotlib==3.6.2
 seaborn==0.12.1
-flake8
-plotly_express
+flake8=="*"
+plotly_express=="*"
+sympy=="*"
