@@ -4,18 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "==1.23.4"
-pandas = "==1.5.1"
-streamlit = "==1.14.0"
-matplotlib = "==3.6.2"
-seaborn = "==0.12.1"
+numpy = "*"
+pandas = "*"
+streamlit = "*"
+matplotlib = "*"
+plotly = "*"
 flake8 = "*"
 plotly-express = "*"
 sympy = "*"
 
 [dev-packages]
-jupyter = "*"
-notebook = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
+python_full_version = "3.7.15"

@@ -1,4 +1,4 @@
-FROM centos/python-38-centos7:latest
+FROM apache/beam_python3.7_sdk
 
 WORKDIR /work
 COPY . .
