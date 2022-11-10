@@ -2,7 +2,5 @@
     "graph": {
         "x_max": 1000
     },
-    "advertise": [
-        ""
-    ]
+    "advertise": [""]
 }

@@ -2,11 +2,15 @@ import streamlit as st
 import numpy as np
 import sympy as sym
 import json
-import plotly.figure_factory as ff
+import os
 import plotly.graph_objects as go
 
+# パス
+CONFIG_PATH = "./config/config.json"
+ADVERTISEMENT_DIR_PATH = "./advertisement"
+
 # 設定ファイルを読み込む
-with open('./config.json') as f:
+with open(CONFIG_PATH) as f:
     cfg = json.load(f)
 
 st.title("調乳温度シミュレーション")
@@ -87,8 +91,20 @@ fig = go.Figure(data, layout)
 fig.add_hline(y=40, line_color="red", line_width=1, line_dash="dash")
 st.plotly_chart(fig)
 
+st.markdown('##### 育児に役立つ情報', unsafe_allow_html=True)
+
+ad_list = os.listdir(ADVERTISEMENT_DIR_PATH)
+for fname in ad_list:
+     fpath = os.path.join(ADVERTISEMENT_DIR_PATH, fname)
+
+     try:
+          with open(fpath, encoding='utf-8') as f:
+               ad = f.read()
+     except Exception as e:
+          print(e)
+     else:
+          st.markdown(ad, unsafe_allow_html=True)
+
+st.write("")
 st.markdown('##### <font color="red">注意事項<font>', unsafe_allow_html=True)
 st.markdown("本サイトのシミュレーション結果に伴う事故について作成者は一切責任を負いません。")
-
-
-
