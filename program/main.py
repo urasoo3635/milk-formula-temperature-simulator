@@ -86,7 +86,7 @@ data = go.Scatter(x=sec, y=temperature, mode="lines", text=temperature)
 
 layout = go.Layout(xaxis={'title': '経過時間（秒）'},
                    yaxis={'title': '温度（℃）'},
-                   title="ミルク温度シミュレーション結果")
+                   title="調乳温度シミュレーション結果")
 
 fig = go.Figure(data, layout)
 fig.add_hline(y=40, line_color="red", line_width=1, line_dash="dash")
