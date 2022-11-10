@@ -1,1 +1,2 @@
-pipenv run streamlit run program/main.py
+cd program
+pipenv run streamlit run main.py

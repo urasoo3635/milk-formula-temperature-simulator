@@ -6,8 +6,9 @@ import os
 import plotly.graph_objects as go
 
 # パス
-CONFIG_PATH = "./config/config.json"
-ADVERTISEMENT_DIR_PATH = "./advertisement"
+ROOT_DIR = os.path.dirname(__file__)
+CONFIG_PATH = os.path.join(ROOT_DIR, "./config/config.json")
+ADVERTISEMENT_DIR_PATH = os.path.join(ROOT_DIR, "./advertisement")
 
 # 設定ファイルを読み込む
 with open(CONFIG_PATH) as f:
@@ -91,9 +92,10 @@ fig = go.Figure(data, layout)
 fig.add_hline(y=40, line_color="red", line_width=1, line_dash="dash")
 st.plotly_chart(fig)
 
-st.markdown('##### 育児に役立つ情報', unsafe_allow_html=True)
+st.markdown('##### スポンサードリンク', unsafe_allow_html=True)
 
 ad_list = os.listdir(ADVERTISEMENT_DIR_PATH)
+ad_list.sort()
 for fname in ad_list:
      fpath = os.path.join(ADVERTISEMENT_DIR_PATH, fname)
 
@@ -105,6 +107,7 @@ for fname in ad_list:
      else:
           st.markdown(ad, unsafe_allow_html=True)
 
+st.write("")
 st.write("")
 st.markdown('##### <font color="red">注意事項<font>', unsafe_allow_html=True)
 st.markdown("本サイトのシミュレーション結果に伴う事故について作成者は一切責任を負いません。")
