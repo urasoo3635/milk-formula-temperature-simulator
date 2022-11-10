@@ -87,7 +87,8 @@ fig = go.Figure(data, layout)
 fig.add_hline(y=40, line_color="red", line_width=1, line_dash="dash")
 st.plotly_chart(fig)
 
-st.markdown("</br>", unsafe_allow_html=True)
-st.markdown('#### <font color="red">注意事項<font>', unsafe_allow_html=True)
+st.markdown('##### <font color="red">注意事項<font>', unsafe_allow_html=True)
 st.markdown("本サイトのシミュレーション結果に伴う事故について作成者は一切責任を負いません。")
+
+
 
