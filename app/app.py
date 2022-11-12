@@ -17,8 +17,8 @@ def app():
           cfg = json.load(f)
 
      st.title("調乳温度シミュレータ")
-     st.markdown("ニュートンの冷却法則を用いて、調乳時のミルク温度の時間変化をシミュレーションします。", unsafe_allow_html=True)
-     st.markdown("授乳時は必ず温度をお確かめ下さい。")
+     st.markdown("ニュートンの冷却法則を用いて、調乳時のミルク温度の時間変化をシミュレーションします。</br>授乳時は必ず温度をお確かめ下さい。", unsafe_allow_html=True)
+     st.markdown("")
 
      ht_dict = {"水道水かけ流し": 1.2e3, "貯めた水で冷却": 2.8e2, "扇風機で冷却": 50, "空気中に放置": 5}
      reikyaku = st.radio("冷却方法", options=list(ht_dict.keys()))
