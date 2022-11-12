@@ -1,8 +1,8 @@
-#!/Users/soichiro/python/workspace/milk-formula-temperature-simulator/.venv/bin/python3
+#! /usr/local/bin/python
 
 import cgitb
-import main
+from app import app
 from wsgiref.handlers import CGIHandler
 
-CGIHandler().run(main)
+CGIHandler().run(app)
 
