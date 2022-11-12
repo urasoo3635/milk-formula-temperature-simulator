@@ -94,20 +94,20 @@ def app():
      fig.add_hline(y=40, line_color="red", line_width=1, line_dash="dash")
      st.plotly_chart(fig)
 
-     # st.markdown('##### スポンサードリンク', unsafe_allow_html=True)
+     st.markdown('##### スポンサードリンク', unsafe_allow_html=True)
 
-     # ad_list = os.listdir(ADVERTISEMENT_DIR_PATH)
-     # ad_list.sort()
-     # for fname in ad_list:
-     #      fpath = os.path.join(ADVERTISEMENT_DIR_PATH, fname)
+     ad_list = os.listdir(ADVERTISEMENT_DIR_PATH)
+     ad_list.sort()
+     for fname in ad_list:
+          fpath = os.path.join(ADVERTISEMENT_DIR_PATH, fname)
 
-     #      try:
-     #           with open(fpath, encoding='utf-8') as f:
-     #                ad = f.read()
-     #      except Exception as e:
-     #           print(e)
-     #      else:
-     #           st.markdown(ad, unsafe_allow_html=True)
+          try:
+               with open(fpath, encoding='utf-8') as f:
+                    ad = f.read()
+          except Exception as e:
+               print(e)
+          else:
+               st.markdown(ad, unsafe_allow_html=True)
 
      st.write("")
      st.write("")
