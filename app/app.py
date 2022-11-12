@@ -16,7 +16,7 @@ def app():
      with open(CONFIG_PATH) as f:
           cfg = json.load(f)
 
-     st.title("調乳温度シミュレーション")
+     st.title("調乳温度シミュレータ")
      st.markdown("ニュートンの冷却法則を用いて、調乳時のミルク温度の時間変化をシミュレーションします。", unsafe_allow_html=True)
 
      ht_dict = {"水道水かけ流し": 1.2e3, "貯めた水で冷却": 2.8e2, "扇風機で冷却": 50, "空気中に放置": 5}
